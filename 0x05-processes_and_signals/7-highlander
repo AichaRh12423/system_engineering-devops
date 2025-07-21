@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Script to stop the 7-highlander process without using kill or killall
 
-# Forcefully terminate the process with SIGKILL
+# Force terminate with SIGKILL (which cannot be ignored)
 pkill -9 -f 7-highlander >/dev/null 2>&1
 
-# Output exactly 2 characters: O and K
+# Output exactly "OK" (no newline)
 printf "OK"

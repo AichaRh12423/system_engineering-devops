@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# A Bash script that traps SIGTERM and prints a message, while keeping the process alive
+# A Bash script that ignores SIGTERM and says "I am invincible!!!"
 
 trap 'echo "I am invincible!!!"' SIGTERM
-echo "OK"
-while true; do
-  sleep 1
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
 done

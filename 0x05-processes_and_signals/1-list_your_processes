@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # This script lists all processes showing only USER and COMMAND (truncated to 24 chars)
-pgrep -l bash
+echo $$
+pgrep -l bash | grep -v "$$" | awk '{print $1}'

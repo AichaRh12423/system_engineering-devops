@@ -2,9 +2,9 @@
 # This script displays 'To infinity and beyond' indefinitely,
 # but upon SIGTERM it must print exactly "OK" and then exit.
 
-trap 'echo OK; exit 0' SIGTERM
+trap 'echo OK; exit' SIGTERM
 
 while true; do
-    echo "To infinity and beyond"
-    sleep 2
+  echo "To infinity and beyond"
+  sleep 2
 done

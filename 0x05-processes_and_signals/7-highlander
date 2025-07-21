@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# This script displays 'To infinity and beyond' indefinitely,
-# but upon SIGTERM it must print exactly "OK" and then exit.
+# infinite.sh
+# Prints a message indefinitely; on SIGTERM, prints "OK" and exits.
 
-trap 'echo OK; exit' SIGTERM
+trap 'echo OK; exit 0' SIGTERM
 
 while true; do
   echo "To infinity and beyond"

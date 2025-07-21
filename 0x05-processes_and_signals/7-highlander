@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # Script to stop the 7-highlander process without using kill or killall
 
-# Send SIGKILL to the process
-pkill -SIGKILL -f 7-highlander
-
-# Check if the process was terminated
-if ! pgrep -f 7-highlander > /dev/null; then
+# Forcefully terminate the process with SIGKILL
+if pkill -9 -f 7-highlander; then
     echo "OK"
 fi

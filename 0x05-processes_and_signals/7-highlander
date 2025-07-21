@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/ bash
 # A Bash script that loops printing "To infinity and beyond" and traps SIGTERM to print "I am invincible!!!"
 
 term_handler() {

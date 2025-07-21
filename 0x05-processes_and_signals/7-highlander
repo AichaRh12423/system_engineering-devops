@@ -1,9 +1,10 @@
-#!/usr/bin/env bash
-# This script prints "To infinity and beyond" every 2 seconds and prints "OK" on SIGTERM
+#!/usr/bin/bash
+# This script displays 'To infinity and beyond' indefinitely
+# Requirement: In between each iteration of the loop, add a sleep 2
 
 trap 'echo "I am invincible!!!"' SIGTERM
-
-while true; do
-  echo "I am invincible!!!"
-  sleep 2
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
 done

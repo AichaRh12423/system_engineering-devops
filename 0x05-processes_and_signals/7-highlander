@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-# Send SIGTERM (15) to the 7‑highlander process so its trap fires
-pid=$(pgrep -f 7-highlander | head -n1)
-if [ -n "$pid" ]; then
-  kill "$pid"
-fi
+# Runs an infinite loop and handles SIGTERM with a message
 
+trap 'echo "I am invincible!!!"' SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 1
+done

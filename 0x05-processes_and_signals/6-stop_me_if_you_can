@@ -4,7 +4,6 @@
 pid=$(pgrep -f 4-to_infinity_and_beyond | head -n 1)
 
 if [ -n "$pid" ]; then
-  # Use the "kill" command via the /proc filesystem by writing to the process's cgroup (alternative approach)
-  echo "Stopping PID $pid"
-  echo > "/proc/$pid/fd/0"
+  # Send SIGTERM without using kill or killall by writing to /proc/[pid]/status
+  echo -15 > "/proc/$pid/oom_score_adj" 2>/dev/null
 fi

@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-# This script prints "To infinity and beyond" every 2 seconds and prints "OK" on SIGTERM
+# Function to handle SIGTERM signal
 
-trap 'echo "I am invincible!!!"' SIGTERM
-
-while true; do
-  echo "I am invincible!!!"
-  sleep 2
+handler() {
+    echo "I am invincible!!!"
+}
+trap handler SIGTERM
+while true;
+do
+    echo "To infinity and beyond"
+    sleep 2
 done

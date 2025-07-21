@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# This script shows the PID and process name of all processes containing "bash" in their name
-ps -eo pid,comm | grep bash
+# This script shows the PID and process name of all processes whose name contains "bash"
+# shellcheck disable=SC2009
+ps -eo pid:5,comm | grep bash

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script shows detailed info for all processes whose name contains "bash"
 # shellcheck disable=SC2009
-ps -C bash -o user=,pid=,ppid=,pcpu=,pmem=,start=,tty=,time=,cmd=
+pgrep -l bash

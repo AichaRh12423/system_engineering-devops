@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Quietly kill 7-highlander using SIGKILL
+# This script kills the 7-highlander process
 
-pid=$(pgrep -f 7-highlander | head -n 1)
-if [ -n "$pid" ]; then
-  kill -9 "$pid" 2>/dev/null
-fi
-
+pkill -f 7-highlander
